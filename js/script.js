@@ -1,21 +1,23 @@
-const spesa = [];
+let list = [];
+let item = '';
+
+while (item !== 'stop') {
+    item = prompt ('Aggiungo alla lista');
+    item = item.toLocaleLowerCase();
+
+    if(item !== 'stop' && item !== ''){
+        list.push(item)
+    }
+}
+console.log(list);
+
+const listEl = document.getElementById("list");
 
 
-let stampa = document.getElementById('stampa');
+for (i = 0; i < list.length; i++) {
+    const listItemEl = document.createElement("li");
+    listItemEl.innerHTML = list[i];
+    listEl.appendChild(listItemEl);
 
 
-let prodotto ;
-
-let prodottoLista = 0;
-
-while (spesa != "stop"){
-    spesa = prompt("acquista prodotti");
-    
-    spesa.push(spesa);
-
-
-
-if (){
-
-   
-}}
+}
